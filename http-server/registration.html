@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Capstone Project 1</title>
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    
+    <body class="min-h-screen flex flex-col items-center justify-center">
+    <div class="flex flex-col items-center justify-center box-border size-100 shadow-md bg-blue-50">
+        <h1 class="text-3xl text-centre font-bold ">Registration Form</h1>
+        <br><br>
+        <form id="regisForm">
+            <div>
+            <label for="name" class="font-bold pl-2 pr-24">Name</label>
+            <input required type="text" id="name" name="name" placeholder="Enter full name" class="bg-white">
+            </div>
+            <div>
+            <br><label for="email" class="font-bold pl-2 pr-25 ">Email</label>
+            <input required type="email" id="email" name="email" placeholder="Enter email" class="bg-white">
+            </div>
+            <div>
+            <br><label for="password" class="font-bold pl-2 pr-18">Password</label>
+            <input required type="password" id="password" name="password" placeholder="Enter password" class="bg-white">
+            </div>
+            <div>
+            <br><label for="dob" class="font-bold pl-2 pr-10">Date of Birth</label>
+            <input required type="date" id="dob" name="dob" class="bg-white">
+            </div>
+            <div>
+            <br><input required type="checkbox" id="acceptTerms" name="acceptTerms">
+            <label for="acceptTerms">Accept Terms & Conditions</label>
+            </div>
+            <div>
+            <br><button type="submit" class="bg-green-500 text-white font-semibold px-4 py-2 rounded">Submit</button>
+            </div>
+        </form>
+    </div>
+    <br><br>
+    <div class="flex flex-col box-border size-160 shadow-md bg-blue-50">
+        <br><br>
+        <h1 class="text-3xl text-center font-bold ">Entries</h1>
+        <br><br>
+        <table class="bg-white self-center">
+                <tr class="font-bold">
+                    <th class="border border-gray-400 px-4 py-2">Name</th>
+                    <th class="border border-gray-400 px-4 py-2">Email</th>
+                    <th class="border border-gray-400 px-4 py-2">Password</th>
+                    <th class="border border-gray-400 px-4 py-2">Dob</th>
+                    <th class="border border-gray-400 px-4 py-2">Accepted terms?</th>
+                </tr>
+        </table>
+    </div>
+
+    <script src="registration.js"></script>
+    </body>
+</html>
