@@ -1,7 +1,7 @@
 const http = require("http");
 const fs = require("fs");
 
-//let homeContent = "";
+let homeContent = "";
 let regisContent = "";
 let projectContent = "";
 const minimist = require("minimist");
@@ -24,6 +24,11 @@ try {
   projectContent = fs.readFileSync("project.html", "utf8");
 } catch (err) {
   console.error("Error reading project.html:", err);
+}
+try {
+  homeContent = fs.readFileSync("home.html", "utf8");
+} catch (err) {
+  console.error("Error reading home.html:", err);
 }
 /*
 http
@@ -52,8 +57,12 @@ http
         response.write(regisContent);
         response.end();
         break;
-      default:
+      case "/project":
         response.write(projectContent);
+        response.end();
+        break;
+      default:
+        response.write(homeContent);
         response.end();
     }
   })
